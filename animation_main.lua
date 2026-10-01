@@ -1,4 +1,27 @@
+-- =========================================================================
+-- FE UGC ANIMATION by in666ar V2.2.0 — MAIN SCRIPT
+-- =========================================================================
+-- Auto-load Fluent library dari GitHub
+-- =========================================================================
 
+local Fluent = getgenv().Fluent
+
+-- Kalau Fluent belum ada di memory, download dari GitHub
+if not Fluent then
+    local LIB_URL = "https://raw.githubusercontent.com/1n66arHub/experiment/refs/heads/main/animation_lib.lua"
+    local ok, res = pcall(function()
+        return loadstring(game:HttpGet(LIB_URL))()
+    end)
+    Fluent = (ok and res) or getgenv().Fluent
+end
+
+if not Fluent then
+    error("[FE UGC ANIMATION] Gagal load Fluent library dari GitHub!")
+end
+
+-- =========================================================================
+-- FE UGC ANIMATION by in666ar V2.2.0
+-- =========================================================================
 -- =========================================================================
 -- FE UGC ANIMATION by in666ar V2.2.0
 -- =========================================================================
